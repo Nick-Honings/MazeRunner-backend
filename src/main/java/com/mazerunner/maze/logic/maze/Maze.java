@@ -1,5 +1,7 @@
 package com.mazerunner.maze.logic.maze;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class Maze {
@@ -102,7 +104,7 @@ public class Maze {
                 }
             }
             // Down
-            if(direction == 1){
+            else if(direction == 1){
 
                 if(IsCellUnvisited(currentRow + 1, currentColumn)){
 
@@ -119,7 +121,7 @@ public class Maze {
                 }
             }
             // Left
-            if(direction == 2){
+            else if(direction == 2){
 
                 if(IsCellUnvisited(currentRow, currentColumn - 1)){
 
@@ -136,7 +138,7 @@ public class Maze {
                 }
             }
             // Right
-            if(direction == 3){
+            else if(direction == 3){
 
                 if(IsCellUnvisited(currentRow, currentColumn + 1)){
 
@@ -221,8 +223,6 @@ public class Maze {
                 }
             }
         }
-
-
     }
 
     // This wil connect cells with each other, based on if the cell is visited or not.
@@ -310,5 +310,40 @@ public class Maze {
 
     public MazeCell[][] getMaze() {
         return maze;
+    }
+
+    public String getMazeString(){
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < rows; i++){
+            for (int j = 0; j < columns; j++){
+                sb.append(maze[i][j]);
+            }
+        }
+        return sb.toString();
+    }
+
+
+    public List<String> getWallsForSending(){
+        List<String> output = new ArrayList<>();
+
+        for (int i = 0; i < this.rows; i++){
+            for(int j = 0; j < this.columns; j++){
+                output.add(maze[i][j].getWallValues());
+            }
+        }
+        return output;
+    }
+
+
+    public int getRows() {
+        return rows;
+    }
+
+    public int getColumns() {
+        return columns;
+    }
+
+    public int getTotalCoins() {
+        return totalCoins;
     }
 }

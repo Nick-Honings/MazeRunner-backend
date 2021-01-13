@@ -19,13 +19,13 @@ public class UserManager {
         }
     }
 
-    public void removeUser(UUID id){
+    public void removeUser(String id){
         if(id != null){
             this.users.removeIf(u -> u.getId() == id);
         }
     }
 
-    public IUser getById(UUID id){
+    public IUser getById(String id){
         return this.users.stream()
                 .filter(u -> u.getId() == id)
                 .findAny()

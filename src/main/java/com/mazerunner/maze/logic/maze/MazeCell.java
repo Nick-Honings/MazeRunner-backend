@@ -1,5 +1,7 @@
 package com.mazerunner.maze.logic.maze;
 
+import java.util.Arrays;
+
 public class MazeCell {
 
     private boolean visited = false;
@@ -53,5 +55,8 @@ public class MazeCell {
         return "{" + hasUpWall + "," + hasLeftWall + "," + hasDownWall + "," + hasRightWall + "}";
     }
 
+    public String getWallValues(){
+        return Arrays.toString(new boolean[]{hasUpWall, hasLeftWall, hasDownWall, hasRightWall});
+    }
 
 }
