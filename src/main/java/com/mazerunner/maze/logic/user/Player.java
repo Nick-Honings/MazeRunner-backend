@@ -3,9 +3,11 @@ package com.mazerunner.maze.logic.user;
 import java.util.UUID;
 
 public interface Player {
-    UUID getId();
+    String getId();
     String getName();
     int getCoinsCollected();
     void incrementCoinsCollected();
+    int[] getSpawnPosition();
+    void setSpawnPosition(int[] spawnPosition);
 
 }

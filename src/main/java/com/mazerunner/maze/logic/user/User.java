@@ -3,12 +3,12 @@ import java.util.UUID;
 
 public class User implements IUser, Player {
 
-    private final UUID id;
+    private final String id;
     private final String name;
     private int coinsCollected;
     private int[] spawnPosition;
 
-    public User(UUID id, String name){
+    public User(String id, String name){
         this.id = id;
         this.name = name;
     }
@@ -18,7 +18,7 @@ public class User implements IUser, Player {
         throw new UnsupportedOperationException();
     }
 
-    public UUID getId() {
+    public String getId() {
         return id;
     }
 
@@ -32,5 +32,13 @@ public class User implements IUser, Player {
 
     public void incrementCoinsCollected() {
         this.coinsCollected++;
+    }
+
+    public int[] getSpawnPosition() {
+        return spawnPosition;
+    }
+
+    public void setSpawnPosition(int[] spawnPosition) {
+        this.spawnPosition = spawnPosition;
     }
 }

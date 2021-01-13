@@ -42,7 +42,7 @@ public class Game {
     }
 
     // Called whenever a player collects a coin
-    private void incrementCoins(UUID id){
+    private void incrementCoins(String id){
         if(id != null){
             this.players.forEach(p -> {
                 if(p.getId() == id){
