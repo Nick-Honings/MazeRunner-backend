@@ -1,26 +1,31 @@
 package com.mazerunner.maze.sockets.controllers;
 
-import com.mazerunner.maze.logic.maze.Maze;
-import com.mazerunner.maze.sockets.messages.inbound.MovementMessage;
+import com.mazerunner.maze.domain.maze.Maze;
 import com.mazerunner.maze.sockets.messages.inbound.StartGameMessage;
 import com.mazerunner.maze.sockets.messages.outbound.GameSetupMessage;
 import com.mazerunner.maze.sockets.messages.outbound.MovementUpdate;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.handler.annotation.MessageMapping;
-import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.messaging.handler.annotation.SendTo;
+import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Controller;
 
-@Controller
+@Controller("/game")
 public class GameController {
 
-//    // Todo: change to pathvariable id
-//    @MessageMapping("/movement")
-//    @SendTo("/topic/game/1")
-//    public MovementUpdate updatePlayerMovement(@Payload MovementMessage message){
-//        System.out.println(message.getMessageType());
-//        System.out.println(message.getArgs());
-//        return new MovementUpdate(message.getArgs());
-//    }
+
+    @Autowired
+    public GameController(){
+
+    }
+
+    // Todo: change to pathvariable id, send to specific users with principal and @SendToUser mapping
+    @MessageMapping("/movement")
+    @SendTo("/topic/game/1")
+    public MovementUpdate updatePlayerMovement(MovementUpdate message){
+
+        return message;
+    }
 
     @MessageMapping("/getGameSetup")
     @SendTo("/topic/gameSetup")

@@ -1,8 +1,7 @@
-package com.mazerunner.maze.logic.user;
+package com.mazerunner.maze.domain.user;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 public class UserManager {
 

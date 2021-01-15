@@ -1,20 +1,38 @@
 package com.mazerunner.maze.sockets.messages.outbound;
 
-import java.util.List;
-
 public class MovementUpdate {
 
-    private List<String> content;
+    private final Integer playerId;
+    private final Integer x;
+    private final Integer y;
+    private final Integer z;
+    private final float rotation;
 
-    public MovementUpdate() {
+    public MovementUpdate(Integer playerId, Integer x, Integer y, Integer z, float rotation) {
+        this.playerId = playerId;
+        this.x = x;
+        this.y = y;
+        this.z = z;
+        this.rotation = rotation;
     }
 
-    public MovementUpdate(List<String> content) {
-        this.content = content;
+    public Integer getPlayerId() {
+        return playerId;
     }
 
-    public List<String> getContent() {
-        return content;
+    public Integer getX() {
+        return x;
     }
 
+    public Integer getY() {
+        return y;
+    }
+
+    public Integer getZ() {
+        return z;
+    }
+
+    public float getRotation() {
+        return rotation;
+    }
 }

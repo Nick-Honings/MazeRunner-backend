@@ -1,6 +1,4 @@
-package com.mazerunner.maze.logic.user;
-
-import java.util.UUID;
+package com.mazerunner.maze.domain.user;
 
 public interface IUser {
 

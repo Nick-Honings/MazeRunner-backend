@@ -1,4 +1,4 @@
-package com.mazerunner.maze.logic.maze;
+package com.mazerunner.maze.domain.maze;
 
 import java.util.Arrays;
 

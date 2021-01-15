@@ -1,11 +1,9 @@
 package com.mazerunner.maze.lobby;
 
-import com.mazerunner.maze.logic.lobby.Lobby;
-import com.mazerunner.maze.logic.lobby.LobbyManager;
-import com.mazerunner.maze.logic.user.Player;
-import com.mazerunner.maze.logic.user.User;
-import org.junit.Assert;
-import org.junit.Before;
+import com.mazerunner.maze.domain.lobby.Lobby;
+import com.mazerunner.maze.domain.lobby.LobbyManager;
+import com.mazerunner.maze.domain.user.Player;
+import com.mazerunner.maze.domain.user.User;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

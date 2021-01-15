@@ -1,7 +1,6 @@
 package com.mazerunner.maze.sockets.messages.outbound;
 
-import com.mazerunner.maze.logic.maze.Maze;
-import com.mazerunner.maze.logic.maze.MazeCell;
+import com.mazerunner.maze.domain.maze.Maze;
 
 public class GameSetupMessage {
 

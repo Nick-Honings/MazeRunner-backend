@@ -1,9 +1,8 @@
 package com.mazerunner.maze.sockets.controllers;
 
-import com.mazerunner.maze.logic.lobby.Lobby;
-import com.mazerunner.maze.logic.lobby.LobbyManager;
-import com.mazerunner.maze.logic.user.Player;
-import com.mazerunner.maze.logic.user.User;
+import com.mazerunner.maze.domain.lobby.Lobby;
+import com.mazerunner.maze.domain.lobby.LobbyManager;
+import com.mazerunner.maze.domain.user.User;
 import com.mazerunner.maze.sockets.messages.inbound.CreateLobbyMessage;
 import com.mazerunner.maze.sockets.messages.inbound.JoinLobbyMessage;
 import com.mazerunner.maze.sockets.messages.inbound.LeaveLobbyMessage;
@@ -12,17 +11,9 @@ import com.mazerunner.maze.sockets.messages.outbound.SimpleMessage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.handler.annotation.DestinationVariable;
 import org.springframework.messaging.handler.annotation.MessageMapping;
-import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
-import org.springframework.messaging.simp.annotation.SubscribeMapping;
 import org.springframework.stereotype.Controller;
-
-import java.io.UnsupportedEncodingException;
-import java.nio.charset.Charset;
-import java.nio.charset.StandardCharsets;
-import java.util.Arrays;
-import java.util.UUID;
 
 @Controller
 public class LobbyController {
