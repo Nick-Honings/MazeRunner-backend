@@ -1,11 +1,7 @@
-package com.mazerunner.maze.logic.lobby;
-
-import com.mazerunner.maze.logic.user.IUser;
-import com.mazerunner.maze.logic.user.User;
+package com.mazerunner.maze.domain.lobby;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 public class LobbyManager {
 

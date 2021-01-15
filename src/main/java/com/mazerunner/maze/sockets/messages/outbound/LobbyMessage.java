@@ -1,7 +1,7 @@
 package com.mazerunner.maze.sockets.messages.outbound;
 
-import com.mazerunner.maze.logic.lobby.Lobby;
-import com.mazerunner.maze.logic.user.Player;
+import com.mazerunner.maze.domain.lobby.Lobby;
+import com.mazerunner.maze.domain.user.Player;
 
 import java.util.List;
 

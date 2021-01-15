@@ -1,6 +1,6 @@
-package com.mazerunner.maze.logic.lobby;
+package com.mazerunner.maze.domain.lobby;
 
-import com.mazerunner.maze.logic.user.Player;
+import com.mazerunner.maze.domain.user.Player;
 
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;

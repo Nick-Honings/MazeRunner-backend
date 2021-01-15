@@ -1,7 +1,7 @@
-package com.mazerunner.maze.logic.lobby;
+package com.mazerunner.maze.domain.lobby;
 
-import com.mazerunner.maze.logic.maze.Maze;
-import com.mazerunner.maze.logic.user.Player;
+import com.mazerunner.maze.domain.maze.Maze;
+import com.mazerunner.maze.domain.user.Player;
 
 import java.util.ArrayList;
 import java.util.List;

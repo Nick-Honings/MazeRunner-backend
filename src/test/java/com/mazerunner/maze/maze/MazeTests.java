@@ -1,14 +1,11 @@
 package com.mazerunner.maze.maze;
 
 
-import com.mazerunner.maze.logic.maze.Maze;
-import com.mazerunner.maze.logic.maze.MazeCell;
+import com.mazerunner.maze.domain.maze.Maze;
+import com.mazerunner.maze.domain.maze.MazeCell;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import java.util.Arrays;
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
