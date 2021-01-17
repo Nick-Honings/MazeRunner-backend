@@ -21,7 +21,7 @@ public class GameController {
 
     // Todo: change to pathvariable id, send to specific users with principal and @SendToUser mapping
     @MessageMapping("/movement")
-    @SendTo("/topic/game/1")
+    @SendTo("/topic/movement/{playerId}")
     public MovementUpdate updatePlayerMovement(MovementUpdate message){
 
         return message;

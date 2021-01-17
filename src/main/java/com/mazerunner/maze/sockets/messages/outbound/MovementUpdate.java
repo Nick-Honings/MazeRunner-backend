@@ -5,14 +5,12 @@ public class MovementUpdate {
     private final Integer playerId;
     private final Integer x;
     private final Integer y;
-    private final Integer z;
     private final float rotation;
 
-    public MovementUpdate(Integer playerId, Integer x, Integer y, Integer z, float rotation) {
+    public MovementUpdate(Integer playerId, Integer x, Integer y, float rotation) {
         this.playerId = playerId;
         this.x = x;
         this.y = y;
-        this.z = z;
         this.rotation = rotation;
     }
 
@@ -26,11 +24,7 @@ public class MovementUpdate {
 
     public Integer getY() {
         return y;
-    }
-
-    public Integer getZ() {
-        return z;
-    }
+    }   
 
     public float getRotation() {
         return rotation;
