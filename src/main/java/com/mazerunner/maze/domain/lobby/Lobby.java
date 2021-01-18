@@ -15,6 +15,7 @@ public class Lobby {
     private final List<Player> players;
     private final Integer minPlayers = 2;
     private final Integer maxPlayers = 4;
+    private final Random random = new Random();
 
 
     public Lobby(){
@@ -27,7 +28,6 @@ public class Lobby {
     private String createLobbyCode() {
         String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         StringBuilder sb = new StringBuilder();
-        Random random = new Random();
 
         int length = 8;
 

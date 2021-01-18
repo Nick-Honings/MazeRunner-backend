@@ -30,6 +30,10 @@ public class User implements IUser, Player {
     @Transient
     private String confirmPassword;
 
+    @JsonIgnore
+    @Transient
+    private boolean isCurrentUser = false;
+
 
     @JsonIgnore
     @Transient
@@ -46,6 +50,10 @@ public class User implements IUser, Player {
 
     public User() {
 
+    }
+
+    public void setCurrentUser(boolean currentUser) {
+        isCurrentUser = currentUser;
     }
 
     // Update user to database.

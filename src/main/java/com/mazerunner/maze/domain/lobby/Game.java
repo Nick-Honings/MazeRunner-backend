@@ -45,7 +45,7 @@ public class Game {
     private void incrementCoins(String id){
         if(id != null){
             this.players.forEach(p -> {
-                if(p.getId() == id){
+                if(p.getId().equals(id)){
                     p.incrementCoinsCollected();
                 }
             });

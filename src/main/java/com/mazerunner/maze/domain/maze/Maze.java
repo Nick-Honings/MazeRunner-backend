@@ -326,9 +326,9 @@ public class Maze {
     public List<String> getWallsForSending(){
         List<String> output = new ArrayList<>();
 
-        for (int i = 0; i < this.rows; i++){
-            for(int j = 0; j < this.columns; j++){
-                output.add(maze[i][j].getWallValues());
+        for (int i = 0; i < this.columns; i++){
+            for(int j = 0; j < this.rows; j++){
+                output.add(maze[j][i].getWallValues());
             }
         }
         return output;

@@ -2,27 +2,27 @@ package com.mazerunner.maze.sockets.messages.outbound;
 
 public class MovementUpdate {
 
-    private final Integer playerId;
-    private final Integer x;
-    private final Integer y;
+    private final String playerId;
+    private final float x;
+    private final float y;
     private final float rotation;
 
-    public MovementUpdate(Integer playerId, Integer x, Integer y, float rotation) {
+    public MovementUpdate(String playerId, float x, float y, float rotation) {
         this.playerId = playerId;
         this.x = x;
         this.y = y;
         this.rotation = rotation;
     }
 
-    public Integer getPlayerId() {
+    public String getPlayerId() {
         return playerId;
     }
 
-    public Integer getX() {
+    public float getX() {
         return x;
     }
 
-    public Integer getY() {
+    public float getY() {
         return y;
     }   
 

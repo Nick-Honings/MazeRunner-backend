@@ -33,12 +33,10 @@ public class LobbyController {
     public LobbyMessage createLobby(CreateLobbyMessage message){
         Lobby lobby = new Lobby();
         // Todo: find playerbyid from usermanager?
-        lobby.addPlayer(new User(message.getPlayerId(), message.getName()));
+        User current = new User(message.getPlayerId(), message.getName());
+        lobby.addPlayer(current);
         lobbyManager.addLobby(lobby);
-        System.out.println("createlobby endpoint hit");
-        System.out.println(lobby.getLobbyCode());
-        System.out.println(lobby.getId());
-        System.out.println(lobby.getPlayers().size());
+
         return new LobbyMessage(lobby);
     }
 
